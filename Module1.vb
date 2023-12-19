@@ -40,7 +40,7 @@ Module Module1
     End Sub
 
     ''' <summary>
-    ''' Prints the headers, loops through, prints the report lines, then prints a summary with calculations and determines a winn4er.
+    ''' Prints the headers, loops through, prints the report lines, then prints a summary with calculations and determines a winner.
     ''' </summary>
     Sub PrintReport()
         Console.WriteLine("Round # ".PadRight(11) & "| " & "User ".PadRight(11) & "| " & "Computer ".PadRight(11) & "| " & "Outcome")
@@ -63,7 +63,7 @@ Module Module1
     End Sub
 
     ''' <summary>
-    ''' Finds the percentages of wins/losses/ties
+    ''' Finds the percentages of wins/losses/ties.
     ''' </summary>
     Sub percents(str As String)
         If str = "User" Then
@@ -74,7 +74,9 @@ Module Module1
             ties += 1
         End If
     End Sub
-
+    ''' <summary>
+    ''' Calculates percentages using the values found in the percents sub.
+    ''' </summary>
     Sub PrintPercent()
         winP = wins / 5
         lossP = losses / 5
@@ -115,7 +117,7 @@ Module Module1
     End Function
 
     ''' <summary>
-    ''' Repeatedly prompts the user for a 1, 2, or 3, and then returns the input once valid input is given
+    ''' Repeatedly prompts the user for a 1, 2, or 3, and then returns the input once valid input is given.
     ''' </summary>
     ''' <returns></returns>
     Function UserMove()
@@ -139,7 +141,7 @@ Module Module1
     End Function
 
     ''' <summary>
-    ''' Accepts a num and returns “Rock” (1) “Paper” (2) “Scissors” (3), otherwise it returns “invalid” 
+    ''' Accepts a num and returns “Rock” (1) “Paper” (2) “Scissors” (3), otherwise it returns “invalid”. 
     ''' </summary>
     ''' <returns></returns>
     Function ConvertNumToWord(input As String)
@@ -155,7 +157,7 @@ Module Module1
     End Function
 
     ''' <summary>
-    ''' Accepts a usermove, a computermove (ints) and then returns “Win”, “Loss”, or “Tie” 
+    ''' Accepts a usermove, a computermove (ints) and then returns “Win”, “Loss”, or “Tie”. 
     ''' </summary>
     ''' <returns></returns>
     Function DetermineOutcome(user As String, cmp As String)
